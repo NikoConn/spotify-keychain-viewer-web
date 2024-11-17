@@ -34,7 +34,7 @@ async function get_stl(url, callback) {
     url: url,
   };
 
-  const response = await fetch("https://spotify-keychain-viewer-web-ngnicog2032-o3k188up.leapcell.dev:8080/spotify-stl", {
+  const response = await fetch("https://spotify-keychain-viewer-web-ngnicog2032-o3k188up.leapcell.dev/spotify-stl", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
