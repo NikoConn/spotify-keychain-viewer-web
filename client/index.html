@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        @font-face {
+            font-family: Palatine;
+            src: url(font/QTPalatine.otf);
+        }
+
+        body{
+            margin: 0;
+            font-family: Palatine;
+            background-color: black;
+        }
+
+        .form-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 80%;
+            z-index: 1;
+        }
+
+        .form-container #urlInput {
+            width: 90%;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+        .form-container #color {
+            width: 60px;
+            height: 60px;
+            margin: 10px;
+            border:none;
+            background-color: white;
+        }
+
+        .modelType-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            position: absolute;
+            bottom: 25px;
+            margin: auto;
+            width: 100%;
+        }
+
+        #colorSelect {
+            margin-left: 30px;
+            height: 60px;
+            border-radius: 10px;
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="swiper">
+        <div id="canvas"></div>
+    </div>
+
+    <div class="form-container">
+        <input type="url" id="urlInput" disabled>
+        <input type="color" id="rectangleColor" value="#000000" disabled>
+        <input type="color" id="codeColor" value="#ffffff" disabled>
+    </div>
+
+    <div class="modelType-container">
+        <button id="downloadButton" disabled>Download</button>
+    </div>
+    
+</body>
+<script src="lib/jszip.min.js"></script>
+<script type="module" src="js/main.js"></script>
+</html>

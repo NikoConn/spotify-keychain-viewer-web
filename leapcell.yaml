@@ -1,5 +1,5 @@
 runtime: python
-startCommand: gunicorn -w 1 -b :8080 app:app
-buildCommand: pip install -r requirements.txt
+startCommand: gunicorn -w 1 -b :8080 server.app:app
+buildCommand: pip install -r server/requirements.txt
 port: 8080
 memory: 512mb
